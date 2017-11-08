@@ -1,37 +1,132 @@
-
 <!DOCTYPE html>
 <html>
-  <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bgimg {
+    background-image: url('https://raw.githubusercontent.com/LemonHawaii/lemonhawaii.github.io/master/sound.gif');
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+}
+
+.topleft {
+    position: absolute;
+    top: 0;
+    left: 16px;
+}
+
+.bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+hr {
+    margin: auto;
+    width: 40%;
+}
+
+<!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+
+</style>
+  
+<head>
+  
   <title>Lemon</title>
   <link rel="shortcut icon" href="https://raw.githubusercontent.com/lemonhawaii/lemonhawaii.github.io/master/lemon_favicon.ico" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <meta name="description" content="Lemon Brand">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300|Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="main.css">
+  
 </head>
+  
+<body>
 
-  <body>
-    <header class="site-header">
-  <div class="site-header-container">
+<div class="bgimg">
+  <div class="topleft">
+    <p>Lemon Brand</p>
+  </div>
+  <div class="middle">
     <img class="site-avatar" src="https://raw.githubusercontent.com/lemonhawaii/lemonhawaii.github.io/master/LemonLogo16.png">
-    <span class="content">
-      <span class="site-title">
-        <span class="site-name">Lemon Brand</span>
-        <span class="site-nickname"></span>
-        <span class="site-description">Made and Mastered In Hawaii</span>
-      </span>
-      <div class="site-links">
+    <h1>COMING SOON</h1>
+    <hr>
+    <p id="demo" style="font-size:30px"></p>
+    <hr>
         <a href="https://twitter.com/lemonhi" onclick="_gaq.push(['_trackEvent', 'linkTo', 'twitter', this.href]);"><i class="fa fa-twitter"></i><span class="link-text">twitter</span></a>
         <a href="https://instagram.com/lemonhi" onclick="_gaq.push(['_trackEvent', 'linkTo', 'github', this.href]);"><i class="fa fa-instagram"></i><span class="link-text">instagram</span></a>
         <a href="https://tumblr.com/lemonhi" onclick="_gaq.push(['_trackEvent', 'linkTo', 'blog', this.href]);"><i class="fa fa-tumblr"></i><span class="link-text">blog</span></a>
-      </div>
-    </span>
   </div>
-</header>
+  <div class="bottomleft">
+    <p>sign up for updates 
+<div id="mc_embed_signup">
+<form action="https://lemonhi.us4.list-manage.com/subscribe/post?u=0a7a961ea0769b7afb57bc877&amp;id=46df08d0bb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0a7a961ea0769b7afb57bc877_46df08d0bb" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    
+    </div>
+</form>
+</div>
 
-  </body>
+<!--End mc_embed_signup--></p>
+  </div>
+</div>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 6, 2018 15:37:25").getTime();
+
+// Update the count down every 1 second
+var countdownfunction = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(countdownfunction);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
+
+</body>
 </html>
